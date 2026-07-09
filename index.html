@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ôn tập — Phương pháp nghiên cứu khoa học</title>
 <style>
 :root {
@@ -282,13 +283,98 @@ footer.actions {
 }
 
 @media (max-width: 640px) {
-  .app { padding: 16px 14px 140px; }
-  .card { padding: 20px; }
-  .stem { font-size: 17px; }
+  .app { padding: 16px 12px 120px; }
+
+  /* Header: stack vertically */
+  header.top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+  .brand { flex-direction: column; gap: 2px; }
   .brand h1 { font-size: 18px; }
-  .chapter-btn { min-width: 100px; }
+  .brand .sub { font-size: 10px; letter-spacing: 0.1em; }
+  .controls {
+    justify-content: flex-start;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .pill { padding: 5px 10px; font-size: 11px; }
+  .progress-badge { padding: 5px 10px; font-size: 11px; }
+
+  /* Chapters nav */
+  .chapters { gap: 5px; margin-bottom: 16px; padding: 2px 0 10px; }
+  .chapter-btn {
+    min-width: 90px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  .chapter-btn .num { font-size: 9px; }
+  .chapter-btn .ch-title { font-size: 11px; max-width: 140px; }
+  .chapter-btn .ch-meta { font-size: 9px; }
+
+  /* Eyebrow */
+  .eyebrow { gap: 8px; margin-bottom: 12px; font-size: 10px; }
+
+  /* Card */
+  .card { padding: 16px 14px; border-radius: 10px; margin-bottom: 14px; }
+
+  /* Context block */
+  .context { padding: 10px 12px; font-size: 13px; margin-bottom: 14px; }
+
+  /* Question stem */
+  .stem { font-size: 16px; line-height: 1.5; margin-bottom: 18px; }
+
+  /* Options: touch-friendly */
+  .options { gap: 6px; }
+  .opt {
+    gap: 10px;
+    padding: 12px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .opt .letter {
+    width: 24px; height: 24px;
+    border-radius: 5px; font-size: 11px;
+  }
+  .opt .text { padding-top: 2px; }
+  .opt .mark { width: 18px; height: 18px; }
+
+  /* Note / explanation */
+  .note { padding: 10px 12px; font-size: 12px; margin-top: 14px; }
+
+  /* Flashcard */
+  .card.flashcard .stem { font-size: 15px; }
+  .reveal-btn { padding: 8px 16px; font-size: 12px; }
+  .answer { padding: 12px 14px; font-size: 15px; margin-top: 12px; }
+
+  /* Footer actions */
+  footer.actions { padding: 10px 12px; }
+  .actions-inner { gap: 8px; }
+  .nav-btn { padding: 8px 12px; font-size: 12px; border-radius: 6px; gap: 4px; }
+  .q-indicator { font-size: 11px; }
   .keys { display: none; }
-  .nav-btn { padding: 8px 12px; }
+
+  /* Empty state */
+  .empty { padding: 40px 16px; font-size: 15px; }
+}
+
+/* Extra small screens (iPhone SE, etc.) */
+@media (max-width: 380px) {
+  .app { padding: 12px 10px 110px; }
+  .brand h1 { font-size: 16px; }
+  .brand .sub { display: none; }
+  .card { padding: 14px 12px; }
+  .stem { font-size: 15px; margin-bottom: 14px; }
+  .opt { padding: 10px; gap: 8px; font-size: 13px; }
+  .opt .letter { width: 22px; height: 22px; font-size: 10px; }
+  .chapter-btn { min-width: 80px; padding: 5px 8px; }
+  .chapter-btn .ch-title { font-size: 10px; max-width: 110px; }
+  footer.actions { padding: 8px 10px; }
+  .nav-btn { padding: 7px 10px; font-size: 11px; }
 }
 </style>
 
